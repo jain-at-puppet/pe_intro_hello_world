@@ -16,7 +16,7 @@ class pe_intro_hello_world::website {
 
   file { 'index.html':
     ensure  => file,
-    path    => '/var/www/html/',
+    path    => '/var/www/html/index.html',
     source  => 'puppet:///modules/pe_intro_hello_world/index.html',
   }
 
