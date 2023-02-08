@@ -16,27 +16,27 @@ class pe_intro_hello_world::website {
 
   file { 'index.html':
     ensure  => file,
-    path    => '/var/www/',
+    path    => '/var/www/html/',
     source  => 'puppet:///modules/pe_intro_hello_world/index.html',
   }
 
   file { 'css-directory':
     ensure  => directory,
-    path    => '/var/www/',
+    path    => '/var/www/html/css/',
     source  => 'puppet:///modules/pe_intro_hello_world/css',
     recurse => true,
   }
 
   file { 'img-directory':
     ensure  => directory,
-    path    => '/var/www/',
+    path    => '/var/www/html/img/',
     source  => 'puppet:///modules/pe_intro_hello_world/img',
     recurse => true,
   }
 
   file { 'js-directory':
     ensure  => directory,
-    path    => '/var/www/',
+    path    => '/var/www/html/js/',
     source  => 'puppet:///modules/pe_intro_hello_world/js',
     recurse => true,
   }
